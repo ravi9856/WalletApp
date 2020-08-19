@@ -1,4 +1,4 @@
-package com.assignment.WalletPay;
+package com.assignment.walletpay;
 
 
 public class User_Details {
