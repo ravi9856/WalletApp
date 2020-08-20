@@ -15,16 +15,22 @@ public class RestHandler {
 	WalletService walletService;
 	
 	@RequestMapping("/createUserAccount")
-	public UserDetail createUserAccount() {
+	public String createUserAccount() {
 		
-		System.out.println(walletService.getbyUserName("sdfsf"));
+		System.out.println("Create User Account");
 		
-		return walletService.getbyUserName("sdfsf");
+		return "Created";
 	}
-	@RequestMapping("/getUser/{userName}")
+	
+	@RequestMapping("/wallet/getbyUserID/{userID}")
+	public UserDetail getbyUserID(@PathVariable String userID) {
+		return walletService.getbyUserID(userID);
+	}
+	
+	@RequestMapping("/wallet/getbyUserName/{userName}")
 	public UserDetail getbyUserName(@PathVariable String userName) {
 		
-		System.out.println(walletService.getbyUserName("sdfsf"));
+		System.out.println(walletService.getbyUserName("USER 1"));
 		
 		return walletService.getbyUserName(userName);
 	}

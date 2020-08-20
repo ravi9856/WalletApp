@@ -21,12 +21,12 @@ public class WalletService {
 		return listOfUsers;
 	}
 	
-	public UserDetail getUserDataByID(String id) {
+	public UserDetail getbyUserID(String id) {
 		return userDetailsRepository.findById(id).orElse(null);
 	}
 	
 	public UserDetail getbyUserName(String name) {
-		return userDetailsRepository.getUserDataByUserName(name).orElse(null);
+		return userDetailsRepository.findByUserName(name).orElse(null);
 	}
 	
 }
