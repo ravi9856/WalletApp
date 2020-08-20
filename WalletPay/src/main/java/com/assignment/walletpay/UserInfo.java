@@ -10,9 +10,9 @@ import java.util.List;
  * 
  */
 @Entity
-@Table(name="user_details")
-@NamedQuery(name="UserDetail.findAll", query="SELECT u FROM UserDetail u")
-public class UserDetail implements Serializable {
+@Table(name="user_info")
+@NamedQuery(name="UserInfo.findAll", query="SELECT u FROM UserInfo u")
+public class UserInfo implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -28,7 +28,7 @@ public class UserDetail implements Serializable {
 	@OneToMany(mappedBy="userDetail")
 	private List<Wallet> wallets;
 
-	public UserDetail() {
+	public UserInfo() {
 	}
 
 	public String getUserId() {

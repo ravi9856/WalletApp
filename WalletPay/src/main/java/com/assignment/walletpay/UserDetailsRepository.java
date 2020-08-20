@@ -5,10 +5,10 @@ import java.util.Optional;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.assignment.walletpay.UserDetail;
+import com.assignment.walletpay.UserInfo;
 
 @Repository
-public interface UserDetailsRepository extends CrudRepository<UserDetail, String> {
+public interface UserDetailsRepository extends CrudRepository<UserInfo, String> {
 
-	Optional<UserDetail> findByUserName(String name);
+	Optional<UserInfo> findByUserName(String name);
 }

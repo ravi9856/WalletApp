@@ -20,10 +20,10 @@ public class WalletSecurityConfiguration extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 
 		http.authorizeRequests()
-			.antMatchers("/").hasRole("ADMIN");
+			.antMatchers("/**").hasRole("WALLETUSER")
 //			.antMatchers("/wallet").hasAnyRole("WALLET_USER", "ADMIN")
 //			.antMatchers("/").permitAll()
-//			.and().formLogin();
+			.and().formLogin();
 	}
 	
 	@Override

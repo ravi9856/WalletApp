@@ -26,7 +26,7 @@ public class WalletUserDetails implements UserDetails {
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		return Arrays.asList(new SimpleGrantedAuthority("WALLET_USER"));
+		return Arrays.asList(new SimpleGrantedAuthority("ROLE_WALLETUSER"));
 	}
 
 	@Override

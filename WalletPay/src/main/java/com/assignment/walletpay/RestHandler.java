@@ -23,12 +23,12 @@ public class RestHandler {
 	}
 	
 	@RequestMapping("/wallet/getbyUserID/{userID}")
-	public UserDetail getbyUserID(@PathVariable String userID) {
+	public UserInfo getbyUserID(@PathVariable String userID) {
 		return walletService.getbyUserID(userID);
 	}
 	
 	@RequestMapping("/wallet/getbyUserName/{userName}")
-	public UserDetail getbyUserName(@PathVariable String userName) {
+	public UserInfo getbyUserName(@PathVariable String userName) {
 		
 		System.out.println(walletService.getbyUserName("USER 1"));
 		
@@ -36,7 +36,7 @@ public class RestHandler {
 	}
 	
 	@RequestMapping("/getAllUsers")
-	public List<UserDetail> getAllUsers() {
+	public List<UserInfo> getAllUsers() {
 		return walletService.getAllUserData();
 	}
 }

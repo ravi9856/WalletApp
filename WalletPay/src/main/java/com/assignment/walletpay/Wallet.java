@@ -32,7 +32,7 @@ public class Wallet implements Serializable {
 	//bi-directional many-to-one association to UserDetail
 	@ManyToOne
 	@JoinColumn(name="user_id")
-	private UserDetail userDetail;
+	private UserInfo userDetail;
 
 	public Wallet() {
 	}
@@ -97,11 +97,11 @@ public class Wallet implements Serializable {
 		return transactions2;
 	}
 
-	public UserDetail getUserDetail() {
+	public UserInfo getUserDetail() {
 		return this.userDetail;
 	}
 
-	public void setUserDetail(UserDetail userDetail) {
+	public void setUserDetail(UserInfo userDetail) {
 		this.userDetail = userDetail;
 	}
 
